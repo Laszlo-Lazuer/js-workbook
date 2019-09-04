@@ -1,6 +1,6 @@
 {
  "scripts": {
-   "serve": "browser-sync start --server --files 'js/*.js' '*.html' 'css/*.css'"
+   "serve": "browser-sync start --server --files 'js/*.js' '*.html'"
  },
   "devDependencies": {
     "browser-sync": "^2.26.7"

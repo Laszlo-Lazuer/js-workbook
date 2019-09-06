@@ -1,33 +1,33 @@
-const nemo = ['nemo'];
-const everyone  = ['dory', 'bruce', 'marlin', 'nemo', 'gill', 'bloat', 'nigel', 'squirt', 'darla', 'hank']
-const large = new Array(1000).fill('nemo');
-
 export const ex7 = () => {
     document.getElementById('sub-title').innerText = "Intro - Inefficient loop";
-    compressBoxesTwice(everyone);
+    // compressBoxesTwice(everyone);
+    logPairs(boxes);
 };
 
-function compressBoxesTwice(boxes) {
-    boxes.forEach(function(boxes) { // O(n)
-        console.log(boxes);
-    });
+// Log all pairs of array
+const boxes = ['a', 'b', 'c', 'd', 'e'];
 
-    boxes.forEach(function(boxes) { // O(n)
-        console.log(boxes);
-    });
+function logPairs(arr) {
+    // For Each version ES5
+    // arr.forEach(function(boxes) { // O(n)
+    //     arr.forEach(function(boxes2) { // O(n)
+    //         console.log('[' + boxes + ', ' + boxes2 + ']');
+    //     });
+    // });
+
+    // For Loops
+    for (let i=0;i<arr.length;i++) {
+        for (let j=0;j<arr.length;j++) {
+            console.log('[' + arr[i] + ', ' + arr[j] + ']')
+        }
+    }
+
+    // arr.forEach(function(boxes) { // O(n)
+    //     arr.forEach(function(boxes2) { // O(n)
+    //         console.log('[' + boxes + ', ' + boxes2 + ']');
+    //     });
+    // });
 }
 
-// BIG O(n+n) => O(2n) -> Drop constants = O(n)
-
-function compressBoxesTwiceDiff(boxes, boxes2) {
-    boxes.forEach(function(boxes) { // O(n)
-        console.log(boxes);
-    });
-
-    boxes2.forEach(function(boxes) { // O(n)
-        console.log(boxes);
-    });
-}
-
-// BIG O(a+b) => O(a+b) -> Drop constants = O(a+b)
-// Since the inputs are distinct, we treat them as separate terms.
+// Big O?
+// Nested loops => O(n*n) => O(n^2) => Quadratic Time

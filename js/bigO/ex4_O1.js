@@ -33,7 +33,7 @@ function funChallenge(input) {
 }
 
 // Solution
-function funChallenge(input) { // O(n)
+function funChallenge2(input) { // O(n)
     let a = 10; // O(1)
     a = 50 + 3; // O(1)
 
